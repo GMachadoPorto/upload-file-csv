@@ -27,4 +27,12 @@ class ProjectDetailView(generics.ListAPIView):
 
     def get_queryset(self):
         projects = get_list_or_404(Project, nome=self.kwargs.get("project_name"))
-        return projects
+        for item in projects:
+            item.__dict__
+
+        def order_projects_by_date(teste):
+            return teste.__dict__["scan_date"]
+
+        project_return = sorted(projects, key=order_projects_by_date, reverse=True)
+
+        return project_return
