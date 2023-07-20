@@ -6,7 +6,9 @@ Para rodar o Back end localmente basta executar a sequência a seguir:
   <li>Ativar o ambiente virtual</li>
     source venv/Scripts/activate
   <li>Instalar as dependências no ambiente virtual através do arquivo</li>
-    pip install -r requirements.txt</li>
+    pip install -r requirements.txt
+  <li>Executar migrações</li>
+    python manage.py migrate
   <li>Rodar o servidor</li>
     python manage.py runserver
 </ul>
